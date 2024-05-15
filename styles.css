@@ -10,6 +10,10 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    background-image: url(images/IMG_6094.jpg);
+    background-size: cover; /* Slika će popuniti cijeli ekran */
+    background-repeat: no-repeat; /* Sprječava ponavljanje slike */
+    background-position: center; /* Centrirajte sliku */
 }
 
 /* Prilagodite stilove za .container */
@@ -56,6 +60,19 @@ body {
     }
 }
 
+
+.newimage {
+    padding:0;
+    margin:auto;
+}
+
+.newimage img {
+    max-width: 230px;
+    height: auto;
+    margin: 0 auto; /* Dodajemo ovaj stil za centriranje slike */
+}
+
+
 /* Dodajte animaciju breathe */
 
 @keyframes breathe {
@@ -73,10 +90,3 @@ body {
 /* Ostali stilovi ostaju nepromenjeni */
 
 /* Dodajte sljedeće stilove u vašu CSS datoteku */
-
-html, body {
-    overflow-x: hidden; /* Spriječi horizontalno pomicanje */
-    overflow-y: auto; /* Omogući vertikalno pomicanje */
-    margin-top: 0;
-    padding-right: 0;
-}
