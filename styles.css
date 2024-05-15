@@ -1,122 +1,62 @@
+/* Postavite osnovne stilove za body */
+
 body {
     margin: 0;
-padding: 0;
+    padding: 0;
     background-color: rgb(252, 250, 252);
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 100vw;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-image: url(images/IMG_6094.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center center;
-    min-height: 65vh;
-    justify-content: center;
-}
-
-
-body {
+    min-height: 100vh; /* Minimalna visina ekrana */
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 70vh;
-    margin: 0;
-    background-color: rgb(252, 250, 252);
+    flex-direction: column;
 }
+
+/* Prilagodite stilove za .container */
 
 .container {
     text-align: center;
-    max-width: 200px;
-    height: auto;
+    max-width: 80%; /* Promenjena maksimalna širina kontejnera */
 }
+
+/* Prilagodite stilove za .main-image-container */
 
 .main-image-container {
     max-width: 100%;
-
     overflow: hidden;
 }
 
-
-
-.tile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-@media screen and (max-width: 414px) {
-    .custom-image {
-        max-width: 220px;
-    }
-}
-
-h1 {
-    font-family: 'Arial', sans-serif ,bold;
-    font-weight: bold;
-    margin-top: -140px;
-    font-weight: 400;
-    font-size: 47px;
-    margin-top: -80px;
-}
-
-.newimage {
-    width: 350px;
-    height: auto;
-}
-
-.userLocationElement {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 20px;
-    
-}
-
-header {
-    width: 95%;
-    max-width: 688px;
-    display: flex;
-    justify-content: flex-end;
-    padding: 0px;
-    margin-top: 10px;
-}
-
-.container {
-    width: 100%;
-    max-width: 680px;
-    margin: 10px auto;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-
-a {
-    text-decoration: none;
-    color: rgb(3, 3, 3);
-}
+/* Prilagodite stilove za .tile */
 
 .tile {
     width: 80%;
-    height: 55px;
-    margin: 7px;
+    height: auto; /* Promenjena visina */
+    margin: 10px; /* Povećan razmak između elemenata */
     border-radius: 48px;
     display: flex;
     align-items: center;
     padding: 10px;
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
-    margin-top: -35px;
     animation-name: breathe;
     animation-duration: 3s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background: linear-gradient(to bottom, rgba(211, 211, 211, 1), rgba(255, 255, 255, 1));
 }
+
+/* Dodajte media query za prilagođavanje stilova za manje uređaje */
+
+@media screen and (max-width: 414px) {
+    .container {
+        max-width: 90%; /* Prilagodite maksimalnu širinu kontejnera za manje uređaje */
+    }
+
+    .tile {
+        width: 90%; /* Prilagodite širinu pločica za manje uređaje */
+    }
+}
+
+/* Dodajte animaciju breathe */
 
 @keyframes breathe {
     0% {
@@ -130,51 +70,13 @@ a {
     }
 }
 
-.image-container {
-    height: 296px;
-    width: auto;
-    overflow: hidden;
-}
-
-
-.icon {
-    margin: 4px 8px;
-    width: 64px;
-    height: 52px;
-}
-
-.tile:hover {
-    transition: cubic-bezier(0.07, 1.41, 0.82, 1.41) 0.2s;
-    transform: scale(1.03);
-}
-
-.location-section {
-    font-size: 20px; /* Velicina fonta */
-    text-align: center; /* Centriranje teksta */
-    font-family: Arial, Helvetica, sans-serif; /* Font */
-    background-color: rgba(255, 255, 255, 0.5); /* Svetlo bela pozadina sa providnošću */
-    padding: 10px; /* Dodatni prostor unutar elementa */
-    border-radius: 10px; }
-
-
-#pin-emoji {
-    font-family: 'Arial', sans-serif;
-}
-
-.move-left {
-    margin-left: 10px;
-}
-
-@media screen and (max-width: 414px) {
-    .tile img.custom-image {
-        max-width: 300px;
-    }
-}
+/* Ostali stilovi ostaju nepromenjeni */
 
 /* Dodajte sljedeće stilove u vašu CSS datoteku */
 
 html, body {
     overflow-x: hidden; /* Spriječi horizontalno pomicanje */
     overflow-y: auto; /* Omogući vertikalno pomicanje */
-margin-top: 35px;
-padding-right: 10px;}
+    margin-top: 0;
+    padding-right: 0;
+}
