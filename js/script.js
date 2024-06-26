@@ -49,6 +49,6 @@ fetch('https://ipapi.co/json?token=9cb45b59aa02f1')
 function updateLocation(location, city) {
     const locationElement = document.getElementById('userLocation');
     const nearbyCityElement = document.getElementById('nearbyCity');
-    locationElement.textContent = `📍 ${location} ❤️ 18 years old 💘 ♊ Gemini`;
+    locationElement.textContent = `📍 ${location} ❤️ 18 years old 💘`;
     nearbyCityElement.textContent = city;
 }
