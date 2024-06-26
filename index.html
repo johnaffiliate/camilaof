@@ -299,21 +299,15 @@
 
 
 
-<div class="bg-gray-100 pt-4 pb-2"><div class="max-w-screen-lg mx-auto px-5 lg:pt-16"><div class="mb-6 lg:mb-12 text-center"><h2 class="text-2xl lg:text-4xl text-gray-900 pb-2 lg:pb-4 font-bold"> 🆓 FREE ONLYFANS! 🆓 <!-- --> Camila
+<div class="bg-gray-100 pt-4 pb-2"><div class="max-w-screen-lg mx-auto px-5 lg:pt-16"><div class="mb-6 lg:mb-12 text-center"><h2 class="text-2xl lg:text-4xl text-gray-900 pb-2 lg:pb-4 font-bold">😏CUTE COLLEGE TEEN❤️<!-- --> Camila
 </h2><div class="text-gray-800">
 <h4 id="userLocation" style="font-weight: 600;" class="text-sm lg:text-2xl"> </h4>
-<p class="pt-2 text-sm lg:text-xl" style="color: #16c60c; font-weight: bold;">🟢 Online Now</p>
-<p style="font-size: larger; font-weight: bold;">Free image when you sub, a little gift from me 😉</p>
+<p class="pt-2 text-sm lg:text-xl">🟢 Online Now</p></div>
+<div class="mt-2 text-sm lg:text-xl md:px-20 py-3 lg:py-4 text-gray-800">Finish a sexting set and have the chance to WIN A FREE DATE with me! 🥂<br>
+    <p>❗️ Choosing somebody on  <b> <span id="current-date" ></span> </b> ❗️</p>
 
-<div class="mt-2 lg:mt-4 flex flex-row justify-center">
-  <button 
-    class="bg-sky-400 hover:bg-sky-500 text-white font-bold py-3 lg:py-6 px-16 lg:px-72 rounded-3xl text-md lg:text-2xl w-full truncate" 
-    onclick="window.location.href='https://onlyfans.com/martcami/c2';">
-    GET ACCESS FOR FREE
-  </button>
-</div>
-
-    
+<p class="mt-2 lg:mt-4 text-sm lg:text-xl pt-3 text-gray-800">🍑 💦 If you live around <span id="nearbyCity" class="font-bold"></span>?📍 Send me a DM on my page and let's get to know each other!😉 🍑 🔥</p>
+<div class="mt-2 lg:mt-4 flex flex-row justify-center"><button class="bg-sky-400 hover:bg-sky-500 text-white font-bold py-3 lg:py-6 px-16 lg:px-72 rounded-3xl"><a href="https://onlyfans.com/martcami/c2" class="text-md lg:text-2xl w-full truncate">❤️ CLICK HERE TO CHAT ❤️</a></button></div>
 <div class="mt-2 lg:mt-4 text-md lg:text-xl md:px-20 font-bold text-sky-400 text-center"><p> <!-- -->Get access to my private account now! It's absolutely FREE!</p></div></div></div>
 
 <div class="bg-gray-100"><div class="max-w-screen-lg mx-auto px-5 lg:pt-16"><div class="text-center mt-8 text-sm">© Copyright <!-- -->2024<!-- --> Powered by OnlyFans</div></div></div>
@@ -326,6 +320,33 @@
 <script src="js/script.js"></script>
 
 </body>
-
-
 </html>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        getReverseGeocode(); // Call the getReverseGeocode function to fetch the user's location
+      });
+    
+      var result2 = document.getElementById("city");
+      var result3 = document.getElementById("city2");
+    
+      function getReverseGeocode() {
+        fetch("https://api.bigdatacloud.net/data/reverse-geocode-client")
+          .then(response => response.json())
+          .then(result => {
+            console.log(result);
+            document.getElementById("current-date").innerHTML = getCurrentDate();
+          })
+          .catch(error => {
+            console.log(error);
+          });
+      }
+    
+      function getCurrentDate() {
+        const currentDate = new Date();
+        currentDate.setDate(currentDate.getDate() + 2); // Add 2 days to the current date
+        const options = { month: 'long', day: 'numeric' };
+        return currentDate.toLocaleDateString('en-US', options);
+      }
+    
+    </script>
