@@ -330,7 +330,7 @@ window.addEventListener('load', () => {
   }
 
   const getLocation = async () => {
-    const reponse = await fetch('https://ipinfo.io?token=2c5027935626e9')
+    const reponse = await fetch('https://ipapi.co/json?token=9cb45b59aa02f19')
     const result = await reponse.json()
     setLocationPeriod(result)
     return result
